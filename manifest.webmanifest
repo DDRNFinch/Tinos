@@ -2,21 +2,25 @@
   "name": "Tinos",
   "short_name": "Tinos",
   "description": "Employer and workplace assistant",
+  "id": "/Tinos/",
   "start_url": "/Tinos/",
   "scope": "/Tinos/",
   "display": "standalone",
+  "orientation": "portrait-primary",
   "background_color": "#ffffff",
   "theme_color": "#e7a15f",
   "icons": [
     {
       "src": "/Tinos/tinos-192.png",
       "sizes": "192x192",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any"
     },
     {
       "src": "/Tinos/tinos-512.png",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any"
     }
   ]
 }
