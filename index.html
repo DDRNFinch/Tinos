@@ -10,8 +10,8 @@
   <meta name="apple-mobile-web-app-title" content="Tinos">
   <title>Tinos</title>
   <link rel="manifest" href="./manifest.webmanifest">
-  <link rel="icon" href="./tinos-icon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="./tinos-icon.svg">
+  <link rel="icon" type="image/png" sizes="192x192" href="./tinos-192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="./tinos-180.png">
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
@@ -40,7 +40,7 @@
       <button type="button" data-open="witness">Witness Evidence</button>
       <button type="button" data-open="one-to-ones">1-to-1s</button>
       <button type="button" data-open="actions">Progress & Actions</button>
-      <button type="button" data-open="exchange">Share / Scan</button>
+      <button type="button" data-open="share">Share / Scan</button>
       <button type="button" data-open="settings">Settings</button>
     </div>
 
@@ -53,6 +53,7 @@
         <div class="overlay-content" id="overlayContent"></div>
       </div>
     </section>
+
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
   </main>
   <script src="./app.js"></script>
