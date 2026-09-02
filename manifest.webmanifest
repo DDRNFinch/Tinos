@@ -1,26 +1,15 @@
 {
-  "name": "Tinos",
+  "name": "Tinos – Employer & Workplace Assistant",
   "short_name": "Tinos",
-  "description": "Employer and workplace assistant",
-  "id": "/Tinos/app-v2",
-  "start_url": "/Tinos/?pwa=2",
-  "scope": "/Tinos/",
+  "description": "Employer and workplace assistant for the Nisia ecosystem.",
+  "start_url": "./",
+  "scope": "./",
   "display": "standalone",
   "orientation": "portrait-primary",
   "background_color": "#ffffff",
-  "theme_color": "#e7a15f",
+  "theme_color": "#ffffff",
   "icons": [
-    {
-      "src": "/Tinos/tinos-192.png",
-      "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "any"
-    },
-    {
-      "src": "/Tinos/tinos-512.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "any"
-    }
+    {"src":"./tinos-192.png","sizes":"192x192","type":"image/png","purpose":"any"},
+    {"src":"./tinos-512.png","sizes":"512x512","type":"image/png","purpose":"any maskable"}
   ]
 }
