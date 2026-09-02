@@ -1,0 +1,11 @@
+{
+  "name":"Tinos – Employer & Workplace Assistant",
+  "short_name":"Tinos",
+  "description":"Employer and workplace assistant for apprenticeships.",
+  "start_url":"./",
+  "scope":"./",
+  "display":"standalone",
+  "background_color":"#ffffff",
+  "theme_color":"#ffffff",
+  "icons":[{"src":"./tinos-icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]
+}
