@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Tinos">
+  <title>Tinos</title>
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" href="./tinos-icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="./tinos-icon.svg">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <main class="screen" id="screen" aria-label="Tinos home">
+    <button class="back-button" id="backButton" type="button">Back</button>
+    <button class="menu-button" id="menuButton" type="button" aria-label="Open Tinos menu" aria-expanded="false"><span></span><span></span><span></span></button>
+
+    <div class="assistant-stage" id="tinosStage" role="button" tabindex="0" aria-label="Tinos">
+      <div class="assistant-float"><div class="assistant-character" id="tinos" aria-hidden="true"><div class="assistant-body"><div class="eyes"><span class="eye"></span><span class="eye"></span></div></div></div></div>
+    </div>
+    <div class="assistant-speech" id="tinosSpeech" aria-live="polite"></div>
+    <div class="context-title" id="contextTitle"></div>
+    <div class="pill-stack" id="pillStack" aria-label="Tinos options"></div>
+
+    <div class="bottom-arches" id="bottomArches" aria-label="Tinos shortcuts">
+      <button class="status-arch" type="button" data-open="apprentices"><svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="38"></circle></svg><strong id="apprenticeCount">0</strong><span>Apprentices</span></button>
+      <button class="status-arch" type="button" data-open="learning"><svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="38"></circle></svg><strong id="learningCount">0</strong><span>Learning</span></button>
+      <button class="centre-mark" id="centreMark" type="button" aria-label="Open Tinos"><span class="centre-eye"></span><span class="centre-eye"></span></button>
+      <button class="status-arch" type="button" data-open="witness"><svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="38"></circle></svg><strong id="witnessCount">0</strong><span>Witness</span></button>
+      <button class="status-arch" type="button" data-open="actions"><svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="38"></circle></svg><strong id="actionCount">0</strong><span>Actions</span></button>
+    </div>
+
+    <div class="tools-menu" id="toolsMenu" aria-hidden="true">
+      <button type="button" data-open="apprentices">My Apprentices</button>
+      <button type="button" data-open="learning">Workplace Learning</button>
+      <button type="button" data-open="witness">Witness Evidence</button>
+      <button type="button" data-open="one-to-ones">1-to-1s</button>
+      <button type="button" data-open="actions">Progress & Actions</button>
+      <button type="button" data-open="exchange">Share / Scan</button>
+      <button type="button" data-open="settings">Settings</button>
+    </div>
+
+    <section class="overlay-panel" id="overlayPanel" aria-hidden="true">
+      <div class="overlay-card">
+        <header class="overlay-header">
+          <div><div class="overlay-kicker" id="overlayKicker">TINOS</div><h1 id="overlayTitle"></h1><p id="overlaySubtitle"></p></div>
+          <button class="round-close" id="overlayClose" type="button" aria-label="Close">×</button>
+        </header>
+        <div class="overlay-content" id="overlayContent"></div>
+      </div>
+    </section>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </main>
+  <script src="./app.js"></script>
+</body>
+</html>
