@@ -1,0 +1,8 @@
+{
+  "appId": "uk.co.nisia.tinos",
+  "appName": "Tinos",
+  "webDir": "www",
+  "server": {
+    "androidScheme": "https"
+  }
+}
