@@ -50,9 +50,39 @@ jobs:
           python -m pip install --quiet pillow
           python <<'PY'
           from pathlib import Path
-          from PIL import Image
+          from PIL import Image, ImageDraw
 
-          source = Image.open('tinos-512.png').convert('RGBA')
+          scale = 4
+          size = 512
+          canvas = Image.new('RGBA', (size * scale, size * scale), (0, 0, 0, 0))
+          draw = ImageDraw.Draw(canvas)
+
+          orange = '#e7a15f'
+          white = '#ffffff'
+          S = scale
+
+          draw.rounded_rectangle(
+              (0, 0, size*S-1, size*S-1),
+              radius=112*S,
+              fill=orange
+          )
+          draw.ellipse(
+              ((98*S, 98*S), (414*S, 414*S)),
+              outline=white,
+              width=13*S
+          )
+          draw.ellipse(
+              ((190*S, 220*S), (250*S, 280*S)),
+              outline=white,
+              width=10*S
+          )
+          draw.ellipse(
+              ((262*S, 220*S), (322*S, 280*S)),
+              outline=white,
+              width=10*S
+          )
+
+          source = canvas.resize((size, size), Image.Resampling.LANCZOS)
           sizes = {
               'mipmap-mdpi': 48,
               'mipmap-hdpi': 72,
@@ -61,10 +91,10 @@ jobs:
               'mipmap-xxxhdpi': 192,
           }
           base = Path('android/app/src/main/res')
-          for folder, size in sizes.items():
+          for folder, target_size in sizes.items():
               target = base / folder
               target.mkdir(parents=True, exist_ok=True)
-              icon = source.resize((size, size), Image.Resampling.LANCZOS)
+              icon = source.resize((target_size, target_size), Image.Resampling.LANCZOS)
               icon.save(target / 'ic_launcher.png')
               icon.save(target / 'ic_launcher_round.png')
 
