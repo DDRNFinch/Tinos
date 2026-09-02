@@ -5,7 +5,7 @@ const ASSETS=[
   '/Tinos/index.html',
   '/Tinos/styles.css',
   '/Tinos/app.js',
-  '/Tinos/manifest.webmanifest',
+  '/Tinos/manifest-v2.webmanifest',
   '/Tinos/tinos-192.png',
   '/Tinos/tinos-512.png'
 ];
