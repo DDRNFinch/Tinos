@@ -1,0 +1,74 @@
+{
+  "specVersion": 1,
+  "game": "Velicia",
+  "artDirection": "Stylised 3D fantasy, Android open-world RPG",
+  "referenceHumanHeightM": 1.75,
+  "peoples": {
+    "amir": {
+      "displayName": "Amir",
+      "summary": "Human-faced wolf people",
+      "heightM": 1.8,
+      "build": "lean, athletic, agile",
+      "face": { "human": true, "forbidden": ["wolf muzzle", "canine snout", "wolf head"] },
+      "features": ["hairy arms", "long wolf-like tail"],
+      "weapons": ["spear"],
+      "combatStyle": ["speed", "evasion", "rapid attacks"],
+      "armour": "light, mobility-focused, tail-friendly",
+      "rigExtras": ["tail_chain"]
+    },
+    "burrok": {
+      "displayName": "Burrok",
+      "summary": "Human-faced bear people",
+      "heightM": 2.75,
+      "build": "heavily muscular, broad",
+      "face": { "human": true, "forbidden": ["bear muzzle", "bear head"] },
+      "features": ["immense physical strength shown through body, not face"],
+      "weapons": ["unarmed", "great axe"],
+      "combatStyle": ["heavy attacks", "grapples", "guard break", "damage absorption"],
+      "armour": "substantial, scaled to size",
+      "rigExtras": ["paired_grapple_sockets"]
+    },
+    "gouran": {
+      "displayName": "Gouran",
+      "summary": "Dwarf-like elemental wizards (original to Velicia)",
+      "heightM": 1.3,
+      "build": "short, stocky, broad shoulders, thick limbs, compact",
+      "face": {
+        "human": true,
+        "traits": ["heavy brows", "deep-set eyes", "broad nose", "weathered", "unattractive", "unusual features"],
+        "beard": "optional",
+        "forbidden": ["goblin look", "large pointed ears", "spindly limbs"]
+      },
+      "weapons": ["elemental magic", "staff"],
+      "combatStyle": ["elemental magic", "intelligence", "cunning"],
+      "armour": "rugged layered wizard robes, belts, pouches, practical equipment",
+      "rigExtras": []
+    },
+    "gyria": {
+      "displayName": "Gyria",
+      "summary": "Skinny orc-like warriors; not inherently evil",
+      "heightM": 1.85,
+      "build": "skinny, wiry, lean, narrow shoulders, long limbs",
+      "face": { "human": false, "traits": ["angular", "battle-worn"] },
+      "forbiddenForSoldiers": ["bulky", "heavily muscular", "elaborate armour"],
+      "weapons": ["human-comparable weapons"],
+      "combatStyle": ["human-comparable tactics"],
+      "armour": "practical, worn, warfare-suited",
+      "morality": "not inherently evil; a civilisation with its own motivations and internal differences",
+      "boss": {
+        "minHeightScale": 1.25,
+        "heightM": [2.3, 2.6],
+        "build": "imposing, stronger proportions, retains Gyria ancestry",
+        "equipment": "distinctive, unique per boss",
+        "requiresUniqueMoveset": true
+      }
+    }
+  },
+  "mobileBudgets": {
+    "standard": { "lod0Tris": [8000, 15000], "maxBones": 60, "maxMaterials": 2, "texture": 1024 },
+    "burrok": { "lod0Tris": [12000, 18000], "maxBones": 65, "maxMaterials": 2, "texture": 2048 },
+    "boss": { "lod0Tris": [15000, 25000], "maxBones": 75, "maxMaterials": 3, "texture": 2048 },
+    "crowd": { "lod0Tris": [3000, 6000], "maxBones": 40, "maxMaterials": 1, "texture": 512 },
+    "lodLevels": [0.5, 0.2]
+  }
+}
